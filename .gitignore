@@ -1,0 +1,75 @@
+
+# Created by https://www.gitignore.io/api/windows,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=windows,visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+#  complete-javascript-course original or finished files
+*.DS_Store
+
+./2-JS-basics/final/*
+
+./3-how-JS-works/starter/*
+./3-how-JS-works/final/*
+
+./4-DOM-pig-game/starter/*
+./4-DOM-pig-game/final/*
+
+./5-advanced-JS/starter/*
+./5-advanced-JS/final/*
+
+./6-budgety/starter/*
+./6-budgety/final/*
+
+./7-ES6/starter/*
+./7-ES6/final/*
+
+./8-asynchronous-JS/starter/*
+./8-asynchronous-JS/final/*
+
+./9-forkify/starter/*
+./9-forkify/final/*
+
+./99-bonus-1/starter/*
+./99-bonus-1/final/*
+
+./budgety-planning-guide.pdf
+./editors-setup.md
+./slides-students-C03.pdf
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.gitignore.io/api/windows,visualstudiocode
