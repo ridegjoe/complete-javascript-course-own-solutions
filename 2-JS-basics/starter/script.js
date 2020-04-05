@@ -444,7 +444,7 @@ var whatDoYouDo = function(job, firstName) {
             return firstName + ' teaches kids how to code';
         case 'driver':
             return firstName + ' drives a cab in Lisbon.';
-        case 'designer':
+        case 'designer':1
             return firstName + ' designes beautiful websites.';
         default:
             return firstName + ' does something else.';
@@ -527,4 +527,56 @@ GOOD LUCK 😀
 
 /*****************************
 * CODING CHALLENGE 3 - MY OWN SOLUUTION (JOZSEF RIDEG)
+*/
+
+var bills = [124, 48, 268];
+var finalBills = [0, 0, 0];
+
+console.log(bills);
+console.log(bills[0]);
+console.log(bills[1]);
+console.log(bills[2]);
+
+function calculateFinalBills(actualBill) {
+    if (0 <= actualBill && actualBill < 50) {
+        console.log(actualBill);
+        actualBill += actualBill * 0.2;
+        console.log(actualBill);
+    } else if (50 <= actualBill && actualBill < 200) {
+        console.log(actualBill);
+        actualBill += actualBill * 0.15;
+        console.log(actualBill);
+    } else if (200 <= actualBill) {
+        console.log(actualBill);
+        actualBill += actualBill * 0.10;
+        console.log(actualBill);
+    } else if (0> actualBill) {
+        console.log(actualBill);
+        console.log('Actual bill cannot be a negative sum');
+    }    
+}
+
+/*
+Testing calculateBills() function with 
+
+actualBill = 0;
+calculateFinalBills(actualBill);
+console.log('')
+
+actualBill = 25;
+calculateFinalBills(actualBill);
+console.log('')
+
+actualBill = 100;
+calculateFinalBills(actualBill);
+console.log('')
+
+actualBill = 300;
+calculateFinalBills(actualBill);
+console.log('')
+
+actualBill = -5;
+calculateFinalBills(actualBill);
+console.log('')
+
 */
