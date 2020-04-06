@@ -512,9 +512,14 @@ console.log(isDesigner);
 */
 
 /*
-John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
+John and his family went on a holiday and went to 3 different restaurants. 
+The bills were $124, $48 and $268.
 
-To tip the waiter a fair amount, John created a simple tip calculator (as a function). He likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). 
+He likes to tip 
+20% of the bill when the bill is less than $50, 
+15% when the bill is between $50 and $200, and 
+10% if the bill is more than $200.
 
 In the end, John would like to have 2 arrays:
 1) Containing all three tips (one for each bill)
@@ -529,6 +534,12 @@ GOOD LUCK 😀
 * CODING CHALLENGE 3 - MY OWN SOLUUTION (JOZSEF RIDEG)
 */
 
+console.log('');
+console.log('');
+console.log('');
+console.log('CODING CHALLENGE 3 - MY OWN SOLUTION')
+console.log('');
+
 var bills = [124, 48, 268];
 var finalBills = [0, 0, 0];
 
@@ -542,19 +553,37 @@ function calculateFinalBills(actualBill) {
         console.log(actualBill);
         actualBill += actualBill * 0.2;
         console.log(actualBill);
+        return actualBill;
     } else if (50 <= actualBill && actualBill < 200) {
         console.log(actualBill);
         actualBill += actualBill * 0.15;
         console.log(actualBill);
+        return actualBill;
     } else if (200 <= actualBill) {
         console.log(actualBill);
         actualBill += actualBill * 0.10;
         console.log(actualBill);
+        return actualBill;
     } else if (0> actualBill) {
         console.log(actualBill);
         console.log('Actual bill cannot be a negative sum');
+        return 0;
     }    
 }
+
+
+
+console.log('');
+
+finalBills[0] = calculateFinalBills(bills[0]);
+finalBills[1] = calculateFinalBills(bills[1]);
+finalBills[2] = calculateFinalBills(bills[2]);
+
+console.log('');
+console.log('original bills');
+console.log(bills);
+console.log('bills + tips');
+console.log(finalBills);
 
 /*
 Testing calculateBills() function with 
