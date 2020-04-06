@@ -530,10 +530,12 @@ In the end, John would like to have 2 arrays:
 GOOD LUCK 😀
 */
 
+
+/*
 /*****************************
 * CODING CHALLENGE 3 - MY OWN SOLUUTION (JOZSEF RIDEG)
 */
-
+/*
 console.log('');
 console.log('');
 console.log('');
@@ -571,8 +573,6 @@ function calculateFinalBills(actualBill) {
     }    
 }
 
-
-
 console.log('');
 
 finalBills[0] = calculateFinalBills(bills[0]);
@@ -585,6 +585,7 @@ console.log(bills);
 console.log('bills + tips');
 console.log(finalBills);
 
+*/
 /*
 Testing calculateBills() function with 
 
@@ -607,5 +608,38 @@ console.log('')
 actualBill = -5;
 calculateFinalBills(actualBill);
 console.log('')
-
 */
+
+/*
+/*****************************
+* CODING CHALLENGE 3 - "OFFICIAL" SOLUTION BY Jonas Schmedtmann
+*/
+
+function tipCalculator(bill) {
+    var percentage;
+    if (bill < 50) {
+        percentage = .2;
+    } else if (bill >= 50 && bill < 200) {
+        percentage = 0.15;
+    } else {
+        percentage = 0.1;
+    }
+    return percentage * bill;
+}
+
+// testing with different values
+console.log(tipCalculator(100));
+console.log(tipCalculator(300));
+console.log(tipCalculator(10));
+
+var bills = [124, 48, 268];
+var tips = [tipCalculator(bills[0]),
+            tipCalculator(bills[1]),
+            tipCalculator(bills[2])];
+console.log(tips);
+
+var finalValues = [bills[0] + tips[0],
+                   bills[1] + tips[1],
+                   bills[2] + tips[2]];
+
+console.log(tips, finalValues);
