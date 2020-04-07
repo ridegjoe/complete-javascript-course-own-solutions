@@ -614,7 +614,7 @@ console.log('')
 /*****************************
 * CODING CHALLENGE 3 - "OFFICIAL" SOLUTION BY Jonas Schmedtmann
 */
-
+/*
 function tipCalculator(bill) {
     var percentage;
     if (bill < 50) {
@@ -643,3 +643,38 @@ var finalValues = [bills[0] + tips[0],
                    bills[2] + tips[2]];
 
 console.log(tips, finalValues);
+*/
+
+/*
+/*****************************
+* Objects and properties
+*/
+
+// Object literal
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john);
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+console.log(john.isMarried);
+
+console.log('');
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+// new Object syntax
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
