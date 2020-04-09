@@ -798,7 +798,7 @@ if (john.bmi > mark.bmi) {
 
 
 // OFFICIAL SOLUTION
-
+/*
 var john = {
     fullName: 'John Smith',
     mass: 110,
@@ -821,6 +821,7 @@ var mark = {
 
 john.calcBMI();
 mark.calcBMI();
+*/
 
 /*
 console.log(john, mark);
@@ -839,6 +840,8 @@ if (john.bmi > mark.bmi) {
 // You have to call john.calcBMI() and mark.calcBMI() only once!
 // It the second and third part of the condition they are already calculated
 // and returned!
+
+/*
 if (john.calcBMI() > mark.calcBMI()) {
     console.log(john.fullName + ' has a higher BMI of ' + john.bmi);
 } else if (mark.bmi > john.bmi) {
@@ -846,3 +849,25 @@ if (john.calcBMI() > mark.calcBMI()) {
 } else {
     console.log('They have the same BMI');
 }
+*/
+
+
+/*
+/*****************************
+* Loops and iteration
+*/
+
+for (var i = 0; i <= 20; i += 2) {
+    console.log(i);
+}
+
+// i = 0, 0 < 10 true, log i to console, i++
+// i = 1, 1 < 10 true, log i to console, i++
+// ...
+// i = 9, 9 < 10 true, log i to console, i++
+// i = 10, 10 < 10 FALSE, exit the loop!
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+
+for (var i = 0)
