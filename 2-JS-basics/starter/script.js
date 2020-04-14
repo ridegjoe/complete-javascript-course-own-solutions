@@ -964,6 +964,7 @@ GOOD LUCK 😀
 
 var johnBills = {
     bills: [124, 48, 268, 180, 42],  // an array within the object, containing the bills
+    // [124, 48, 268, 180, 42]
     calcTip: function() {
         for (var i = 0; i < this.bills.length; i++) {
             if (0 < this.bills[i] && this.bills[i] < 50) {
@@ -1004,6 +1005,7 @@ console.log(johnBills.finalBills);
 
 var markBills = {
     bills: [77, 375, 110, 45],  // an array within the object, containing the bills
+    //[77, 375, 110, 45]
     calcTip: function() {
         for (var i = 0; i < this.bills.length; i++) {
             if (0 < this.bills[i] && this.bills[i] < 100) {
@@ -1046,13 +1048,14 @@ function averageTipCalculator(billName) {
     averageTip = 0;
     tips= billName.tips;
     for (var i = 0; i < this.tips.length; i++) {
-        console.log(this.tips[i]);
+        // console.log(this.tips[i]);
         this.sum += this.tips[i];
-        console.log(this.sum);
+        // console.log(this.sum);
     }
-    console.log(this.sum);
+    // console.log(this.sum);
     this.averageTip = this.sum / tips.length;
-    console.log(' average tip is: ' + averageTip);
+    // console.log(' average tip is: ' + averageTip);
+    return this.sum;
 }
 
 console.log('');
@@ -1061,3 +1064,21 @@ console.log('');
 averageTipCalculator(johnBills);
 console.log('');
 averageTipCalculator(markBills);
+
+console.log('');
+console.log('');
+console.log('');
+console.log(averageTipCalculator(johnBills));
+console.log(averageTipCalculator(markBills));
+
+function evaluation() {
+    if (averageTipCalculator(johnBills) > averageTipCalculator(markBills)) {
+        console.log('Johns family payed on average ' + averageTipCalculator(johnBills) + ' which is more as Marks family with ' + averageTipCalculator(markBills))
+    } else if (averageTipCalculator(markBills) > averageTipCalculator(johnBills)) {
+        console.log('Marks family payed on average ' + averageTipCalculator(markBills) + ' which is more as Johns family with ' + averageTipCalculator(johnBills))
+    } else {
+        console.log('Marks family payed on average ' + averageTipCalculator(markBills) + ' which is equal to Johns family with ' + averageTipCalculator(johnBills))
+    }
+}
+
+evaluation()
