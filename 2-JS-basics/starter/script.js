@@ -952,10 +952,13 @@ Mark likes to tip
 25% if the bill is more than $300 (different than John).
 
 5. Implement the same functionality as before, this time using Mark's tipping rules
-6. Create a function (not a method) to calculate the average of a given array of tips. HINT: Loop over the array, and in each iteration store the current sum in a variable (starting from 0). After you have the sum of the array, divide it by the number of elements in it (that's how you calculate the average)
+6. Create a function (not a method) to calculate the average of a given array of tips. 
+    HINT: Loop over the array, and in each iteration store the current sum in a variable (starting from 0).
+    After you have the sum of the array, divide it by the number of elements in it 
+    (that's how you calculate the average)
 7. Calculate the average tip for each family
 8. Log to the console which family paid the highest tips on average
-
+i
 GOOD LUCK 😀
 */
 
@@ -1035,3 +1038,26 @@ console.log(markBills.bills);
 console.log(markBills.tips);
 console.log(markBills.finalBills);
 console.log(markBills);
+
+
+
+function averageTipCalculator(billName) {
+    sum = 0,
+    averageTip = 0;
+    tips= billName.tips;
+    for (var i = 0; i < this.tips.length; i++) {
+        console.log(this.tips[i]);
+        this.sum += this.tips[i];
+        console.log(this.sum);
+    }
+    console.log(this.sum);
+    this.averageTip = this.sum / tips.length;
+    console.log(' average tip is: ' + averageTip);
+}
+
+console.log('');
+console.log('');
+console.log('');
+averageTipCalculator(johnBills);
+console.log('');
+averageTipCalculator(markBills);
