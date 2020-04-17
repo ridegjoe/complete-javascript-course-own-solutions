@@ -133,16 +133,26 @@ var john = {
         console.log(this);
         console.log(2016 - this.yearOfBirth);
 
+        /*
         function innerFunction() {
             console.log(this);
         }
         innerFunction();
+        */
     }
 
 }
 
 john.calculateAge();
 
+var mike = {
+    name: "Mike",
+    yearOfBirth: 1984
+}
+
+// method borrowing
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
 
 
 
