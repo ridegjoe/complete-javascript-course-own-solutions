@@ -15,23 +15,49 @@ scores = [0,0];
 roundScore = 0;
 activePlayer = 1;
 
-dice = Math.floor(Math.random() * 6) + 1;
-console.log(dice);
-
+// dice = Math.floor(Math.random() * 6) + 1;
+// console.log(dice);
 // document.querySelector('#current-0').textContent = dice;
 // document.querySelector('#current-' + activePlayer).textContent = dice;
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
 // wrong
 // document.querySelector('#current-' + activePlayer).textContent = '<em>' + dice + '</em>';
-
-document.querySelector('#current-' + activePlayer).textContent = dice;
-
-var x = document.querySelector('#score-0').textContent;
-console.log(x);
+// document.querySelector('#current-' + activePlayer).textContent = dice;
+//
+// var x = document.querySelector('#score-0').textContent;
+// console.log(x);
 
 document.querySelector('.dice').style.display = 'none';
 
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
 
+/*
+// External function of button
+function btn() {
+    // Do something here
+}
+btn();
+*/
+
+// eventListener method with anonymous function
+document.querySelector('.btn-roll').addEventListener('click', function() {
+
+    // 1. Random number
+    var dice = Math.floor(Math.random() * 6) + 1; // I declare it here. I don't need it outside
+
+    // 2. Display the result
+    var diceDOM = document.querySelector('.dice');
+    // document.querySelector('.dice').style.display = 'block';
+    diceDOM.style.display = 'block';
+    // dice-1.png, dice-2.png, ... dice-6.png
+    diceDOM.src = 'dice-' + dice + '.png';
+
+    // 3. Update the round score but only IF the rolled number is NOT a 1
+
+});
 
 
 
